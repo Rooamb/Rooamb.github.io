@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LMS - Quiz</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<meta name="google-signin-client_id" content="1075300574836-0gtfcplev9ibd9rnm7hf1b099tctjq33.apps.googleusercontent.com">
+  </head>
+<body>
+    <div class="container">
+        <div class="box dark_blue">
+        </div>
+        <div class="container" id="container2">
+            <div class="box light_blue">
+            </div>
+            <div class="box green">
+            </div>
+        </div>
+        <div class="box red">
+        </div>
+    </div>
+	<div class="g-signin2" data-onsuccess="onSignIn"></div>
+<script>
+	function onSignIn(googleUser) {
+		var profile = googleUser.getBasicProfile();
+		console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+		console.log('Name: ' + profile.getName());
+		console.log('Image URL: ' + profile.getImageUrl());
+		console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+	}
+    function signOut() {
+		var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function() {
+            console.log('User signed out.');
+        });
+    }
+</script>
+</body>
+</html>
