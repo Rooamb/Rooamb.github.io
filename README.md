@@ -1,5 +1,5 @@
 # tempral.github.io
-
+[![GitHub Actions Demo](https://github.com/tempral/tempral.github.io/actions/workflows/github-actions.yml/badge.svg)](https://github.com/tempral/tempral.github.io/actions/workflows/github-actions.yml)
 
 Headers
 # This is an <h1> tag
